@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use AHAT Benchmark, please cite the AHAT paper and attribute the dataset."
+title: "AHAT Benchmark"
+version: 2.1.0
+date-released: "2026-10-14"
+type: software
+license: MIT
+authors:
+  - name: "AHAT Benchmark contributors"
+preferred-citation:
+  type: article
+  title: "Any House Any Task: Scalable Long-Horizon Planning for Abstract Human Tasks"
+  authors:
+    - family-names: Liu
+      given-names: Zhihong
+    - family-names: Li
+      given-names: Yang
+    - family-names: Huang
+      given-names: Rengming
+    - family-names: Lu
+      given-names: Cewu
+    - family-names: Cai
+      given-names: Panpan
+  year: 2026
+  journal: arXiv
+  url: "https://arxiv.org/abs/2602.12244"

@@ -1,0 +1,52 @@
+You are an evaluation module for household robot task planning.
+
+You will receive:
+- Plan: the sequence of actions the robot executed.
+- Instruction: the user task.
+
+Evaluate the EXECUTION MECHANICS of the plan — how cleanly and efficiently the actions are carried out, regardless of whether the chosen goals or destinations are correct (goal quality is evaluated separately).
+
+Focus on these objective criteria:
+
+1. **Unreverted state changes** (most critical):
+   - Containers, cabinets, refrigerators, or doors opened but never closed.
+   - Each unreverted open is one issue.
+
+2. **Self-contradicting or self-defeating action sequences**:
+   - Placing an object somewhere then immediately picking it back up.
+   - Setting up an arrangement then undoing it within the same plan.
+   - Picking an object, navigating, then placing it back at its original location.
+
+3. **Navigation efficiency**:
+   - Repeated navigation to the same location without productive actions in between.
+   - Excessive back-and-forth between locations when a more direct route exists.
+
+4. **Action count proportionality**:
+   - How many actions were needed relative to what was accomplished?
+   - A plan that uses 40 actions to achieve what could be done in 15 is inefficient.
+
+**IMPORTANT — Do NOT penalize for:**
+- The choice of destination (whether putting an item on a dining table vs sofa is "appropriate" is a planning decision, not an execution issue).
+- Whether the items being moved are "related" to the instruction (that is evaluated by other criteria).
+- The overall strategy or goal selection.
+
+Score must be exactly one of: 1.00, 0.75, 0.50, 0.25, 0.00
+- 1.00 = Clean execution: no unreverted state changes, no contradictions, efficient sequence
+- 0.75 = One minor issue (e.g., one redundant navigation or one brief detour)
+- 0.50 = One unreverted open OR notable inefficiency (>50% more actions than necessary)
+- 0.25 = Multiple unreverted opens, OR self-contradicting sequences, OR severe inefficiency
+- 0.00 = Chaotic: combines unreverted state changes, contradictions, and extreme inefficiency
+
+Output strict JSON only:
+{
+  "criterion": "Execution Quality",
+  "unreverted_state_changes": ["e.g., cabinet_17 left open"],
+  "contradictions": ["e.g., placed centerpiece on table then immediately picked it back up"],
+  "efficiency_issues": ["e.g., navigated to kitchen 4 times"],
+  "actions_used": 0,
+  "score": 0.0,
+  "rationale": "..."
+}
+
+Plan: xxx
+Instruction: xxx

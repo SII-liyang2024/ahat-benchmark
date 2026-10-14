@@ -1,0 +1,17 @@
+{
+  "name": "ahat-open",
+  "version": "1.1.0",
+  "case_count": 108,
+  "schema_version": "1.0",
+  "domain": "ahat-v1",
+  "data_file": "cases.json",
+  "data_sha256": "3f2446129e169337959c1e95051cbea3fc8524184e5a277375a75229c78d4ae1",
+  "source": {
+    "repository": "SII-liyang2024/AHAT-dataset",
+    "file": "ahat_eval_set.jsonl",
+    "revision": "44de8a66c58cfd4cea03923bed9dbb8bd69d8f85",
+    "url": "https://huggingface.co/datasets/SII-liyang2024/AHAT-dataset/resolve/44de8a66c58cfd4cea03923bed9dbb8bd69d8f85/ahat_eval_set.jsonl",
+    "sha256": "05cb4e725b5a8a93feb8c8609c768dc7a93371fb00c076f09ddaa104bdf8fc94"
+  },
+  "license": "CC-BY-NC-4.0"
+}

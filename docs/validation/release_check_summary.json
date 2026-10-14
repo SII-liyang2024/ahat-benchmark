@@ -1,0 +1,24 @@
+{
+  "version": "2.1.0",
+  "date": "2026-10-14",
+  "tested_python": "3.13.9",
+  "platform": "Linux x86-64",
+  "glibc": "2.35",
+  "offline_regression_tests": 36,
+  "regression_status": "passed",
+  "doctor": "passed",
+  "audited_core_modules_unchanged": 11,
+  "hf_reference_cases_verified": 348,
+  "scoring_combinations_verified": 1250,
+  "installed_wheel": {
+    "isolated_python": true,
+    "working_directory_outside_checkout": true,
+    "package_imported_from_install": true,
+    "doctor": "passed",
+    "real_val_mock_judge_end_to_end": "passed",
+    "code_matches_source": true
+  },
+  "llm_api_calls_this_preparation": 0,
+  "data_sha256": "05cb4e725b5a8a93feb8c8609c768dc7a93371fb00c076f09ddaa104bdf8fc94",
+  "evaluation_code_sha256": "f6a14b0daad8aa0ccd4ddc15d76b1fa85f5706a733e0292ab24a1331020f2acc"
+}

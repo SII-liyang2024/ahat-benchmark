@@ -1,0 +1,414 @@
+{
+  "date": "2026-10-14",
+  "implementation_version": "2.0.0",
+  "scope": "Fresh ds-v4.1 reviews on historical scenes; scores include invalid/empty plans as zero",
+  "judge": "ds-v4.1-flash-w8a8",
+  "api_concurrency_limit": 64,
+  "observed_peak": 64,
+  "total_cases": 696,
+  "successful_dimensions": 1620,
+  "system_errors": 0,
+  "source_comparison_sha256": "c96c9d8fc5ced344cbae155a9c3565b8d1be2f12ab260a5cd73e626e8a826aae",
+  "deterministic_parity": {
+    "passed": true,
+    "total_cases": 696,
+    "valid_cases": 405,
+    "exact_dimension_inputs": 1620,
+    "historical_raw_reviews_replayed": 1620,
+    "historical_superseded_log_records": 1,
+    "checks": [
+      "source hashes and ID alignment",
+      "domain and VAL runtime hashes",
+      "four exact paper prompts",
+      "VAL verdicts",
+      "initial PDDL and excluded facts",
+      "normalized plans",
+      "final states",
+      "D1-D4 exact user text",
+      "raw historical JSON parsing",
+      "weighted scores and cap",
+      "mean denominator"
+    ],
+    "groups": [
+      {
+        "group": "gpt-6-luna_easy",
+        "total": 146,
+        "val_valid": 57,
+        "val_status_counts": {
+          "valid": 57,
+          "missing_plan": 42,
+          "invalid": 47
+        },
+        "ahat_mean": 0.33904109589041087,
+        "benchmark_replay_mean": 0.339041095890411
+      },
+      {
+        "group": "gpt-6-luna_medium",
+        "total": 94,
+        "val_valid": 21,
+        "val_status_counts": {
+          "invalid": 29,
+          "missing_plan": 44,
+          "valid": 21
+        },
+        "ahat_mean": 0.15053191489361697,
+        "benchmark_replay_mean": 0.15053191489361703
+      },
+      {
+        "group": "gpt-6-luna_open",
+        "total": 108,
+        "val_valid": 26,
+        "val_status_counts": {
+          "missing_plan": 68,
+          "valid": 26,
+          "invalid": 14
+        },
+        "ahat_mean": 0.14166666666666666,
+        "benchmark_replay_mean": 0.14166666666666666
+      },
+      {
+        "group": "gpt-6.1-sol_easy",
+        "total": 146,
+        "val_valid": 135,
+        "val_status_counts": {
+          "valid": 135,
+          "missing_plan": 7,
+          "invalid": 4
+        },
+        "ahat_mean": 0.8424657534246581,
+        "benchmark_replay_mean": 0.8424657534246576
+      },
+      {
+        "group": "gpt-6.1-sol_medium",
+        "total": 94,
+        "val_valid": 70,
+        "val_status_counts": {
+          "valid": 70,
+          "missing_plan": 15,
+          "invalid": 9
+        },
+        "ahat_mean": 0.6563829787234046,
+        "benchmark_replay_mean": 0.6563829787234042
+      },
+      {
+        "group": "gpt-6.1-sol_open",
+        "total": 108,
+        "val_valid": 96,
+        "val_status_counts": {
+          "valid": 96,
+          "invalid": 5,
+          "missing_plan": 7
+        },
+        "ahat_mean": 0.6398148148148146,
+        "benchmark_replay_mean": 0.6398148148148147
+      }
+    ]
+  },
+  "overall": [
+    {
+      "model": "gpt-6-luna",
+      "total": 348,
+      "ahat_mean": 0.22686781609195403,
+      "benchmark_mean": 0.23333333333333334,
+      "delta_percentage_points": 0.6465517241379309
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "total": 348,
+      "ahat_mean": 0.7293103448275863,
+      "benchmark_mean": 0.7324712643678161,
+      "delta_percentage_points": 0.31609195402297896
+    }
+  ],
+  "groups": [
+    {
+      "group": "gpt-6-luna_easy",
+      "model": "gpt-6-luna",
+      "split": "easy",
+      "total": 146,
+      "val_valid_ahat": 57,
+      "val_valid_benchmark": 57,
+      "ahat_mean": 0.33904109589041087,
+      "benchmark_mean": 0.3462328767123288,
+      "delta_percentage_points": 0.7191780821917904,
+      "same_case_scores": 123,
+      "changed_case_scores": 23,
+      "mean_absolute_case_delta": 0.014726027397260274,
+      "max_absolute_case_delta": 0.20000000000000007,
+      "critical_failure_ahat": 0,
+      "critical_failure_benchmark": 0,
+      "critical_failure_disagreements": 0,
+      "critical_failure_changed_ids": [],
+      "dimension_score_changes": {
+        "D1": {
+          "changed": 11,
+          "total": 57,
+          "mean_delta": 0.03508771929824561,
+          "mean_absolute_delta": 0.05263157894736842
+        },
+        "D2": {
+          "changed": 3,
+          "total": 57,
+          "mean_delta": -0.008771929824561403,
+          "mean_absolute_delta": 0.017543859649122806
+        },
+        "D3": {
+          "changed": 6,
+          "total": 57,
+          "mean_delta": 0.017543859649122806,
+          "mean_absolute_delta": 0.05263157894736842
+        },
+        "D4": {
+          "changed": 7,
+          "total": 57,
+          "mean_delta": 0.013157894736842105,
+          "mean_absolute_delta": 0.039473684210526314
+        }
+      },
+      "val_signature": "9bd3cd0cb5d5dd87644732cc5814d67cab08891a64564a043a6e91d2cf85de7d",
+      "judge_signature": "41b79953e522f1ffcdacb85907e5451a311188e360c2fd2fc3460d9353d8eb1c"
+    },
+    {
+      "group": "gpt-6-luna_medium",
+      "model": "gpt-6-luna",
+      "split": "medium",
+      "total": 94,
+      "val_valid_ahat": 21,
+      "val_valid_benchmark": 21,
+      "ahat_mean": 0.15053191489361697,
+      "benchmark_mean": 0.1574468085106383,
+      "delta_percentage_points": 0.6914893617021328,
+      "same_case_scores": 83,
+      "changed_case_scores": 11,
+      "mean_absolute_case_delta": 0.01861702127659575,
+      "max_absolute_case_delta": 0.6000000000000001,
+      "critical_failure_ahat": 3,
+      "critical_failure_benchmark": 2,
+      "critical_failure_disagreements": 1,
+      "critical_failure_changed_ids": [
+        "3bc29099-3549-4cbe-8009-9a21718bf60e"
+      ],
+      "dimension_score_changes": {
+        "D1": {
+          "changed": 12,
+          "total": 21,
+          "mean_delta": 0.03571428571428571,
+          "mean_absolute_delta": 0.15476190476190477
+        },
+        "D2": {
+          "changed": 3,
+          "total": 21,
+          "mean_delta": 0.011904761904761904,
+          "mean_absolute_delta": 0.03571428571428571
+        },
+        "D3": {
+          "changed": 4,
+          "total": 21,
+          "mean_delta": 0.0,
+          "mean_absolute_delta": 0.047619047619047616
+        },
+        "D4": {
+          "changed": 3,
+          "total": 21,
+          "mean_delta": 0.011904761904761904,
+          "mean_absolute_delta": 0.03571428571428571
+        }
+      },
+      "val_signature": "7cf5368faf9e0fbb91d9198e70b69a3e28c250e0b4dff67d098ec6f207ce9dda",
+      "judge_signature": "1110b602686f0b1f74014909848b18e640f9b2bf1bcea45075ea108d729f696a"
+    },
+    {
+      "group": "gpt-6-luna_open",
+      "model": "gpt-6-luna",
+      "split": "open",
+      "total": 108,
+      "val_valid_ahat": 26,
+      "val_valid_benchmark": 26,
+      "ahat_mean": 0.14166666666666666,
+      "benchmark_mean": 0.14675925925925926,
+      "delta_percentage_points": 0.5092592592592593,
+      "same_case_scores": 91,
+      "changed_case_scores": 17,
+      "mean_absolute_case_delta": 0.0125,
+      "max_absolute_case_delta": 0.1499999999999999,
+      "critical_failure_ahat": 0,
+      "critical_failure_benchmark": 0,
+      "critical_failure_disagreements": 0,
+      "critical_failure_changed_ids": [],
+      "dimension_score_changes": {
+        "D1": {
+          "changed": 11,
+          "total": 26,
+          "mean_delta": 0.038461538461538464,
+          "mean_absolute_delta": 0.11538461538461539
+        },
+        "D2": {
+          "changed": 6,
+          "total": 26,
+          "mean_delta": 0.038461538461538464,
+          "mean_absolute_delta": 0.057692307692307696
+        },
+        "D3": {
+          "changed": 4,
+          "total": 26,
+          "mean_delta": 0.028846153846153848,
+          "mean_absolute_delta": 0.04807692307692308
+        },
+        "D4": {
+          "changed": 5,
+          "total": 26,
+          "mean_delta": -0.038461538461538464,
+          "mean_absolute_delta": 0.057692307692307696
+        }
+      },
+      "val_signature": "b1bd50faea4de947ad72907eeabc428ef7a313aa34da09aa8c119f335b3d2c35",
+      "judge_signature": "c67689b416c282b7d40791c7a4da0b6e9c62cbd7a69fdb5866685ec235375136"
+    },
+    {
+      "group": "gpt-6.1-sol_easy",
+      "model": "gpt-6.1-sol",
+      "split": "easy",
+      "total": 146,
+      "val_valid_ahat": 135,
+      "val_valid_benchmark": 135,
+      "ahat_mean": 0.8424657534246581,
+      "benchmark_mean": 0.852054794520548,
+      "delta_percentage_points": 0.9589041095889872,
+      "same_case_scores": 108,
+      "changed_case_scores": 38,
+      "mean_absolute_case_delta": 0.02945205479452055,
+      "max_absolute_case_delta": 0.8,
+      "critical_failure_ahat": 1,
+      "critical_failure_benchmark": 0,
+      "critical_failure_disagreements": 1,
+      "critical_failure_changed_ids": [
+        "0b0da0a5-38b2-4bdd-b2c2-6d4c331e1cd1"
+      ],
+      "dimension_score_changes": {
+        "D1": {
+          "changed": 20,
+          "total": 135,
+          "mean_delta": 0.024074074074074074,
+          "mean_absolute_delta": 0.046296296296296294
+        },
+        "D2": {
+          "changed": 3,
+          "total": 135,
+          "mean_delta": -0.003703703703703704,
+          "mean_absolute_delta": 0.007407407407407408
+        },
+        "D3": {
+          "changed": 10,
+          "total": 135,
+          "mean_delta": -0.011111111111111112,
+          "mean_absolute_delta": 0.025925925925925925
+        },
+        "D4": {
+          "changed": 16,
+          "total": 135,
+          "mean_delta": 0.003703703703703704,
+          "mean_absolute_delta": 0.02962962962962963
+        }
+      },
+      "val_signature": "23e5d0e39afbc21dccdb8d63c7ad04b1e80eb2258e43181c8bad9161cb91d942",
+      "judge_signature": "1baa5e0e68077ec562084b2bdb02e585273835e4b58c73490a6d66ee15cae34e"
+    },
+    {
+      "group": "gpt-6.1-sol_medium",
+      "model": "gpt-6.1-sol",
+      "split": "medium",
+      "total": 94,
+      "val_valid_ahat": 70,
+      "val_valid_benchmark": 70,
+      "ahat_mean": 0.6563829787234046,
+      "benchmark_mean": 0.6574468085106383,
+      "delta_percentage_points": 0.10638297872337388,
+      "same_case_scores": 63,
+      "changed_case_scores": 31,
+      "mean_absolute_case_delta": 0.03617021276595745,
+      "max_absolute_case_delta": 0.39999999999999997,
+      "critical_failure_ahat": 0,
+      "critical_failure_benchmark": 1,
+      "critical_failure_disagreements": 1,
+      "critical_failure_changed_ids": [
+        "fac6321b-b35f-4b4c-a91c-3ea5f96f6ddc"
+      ],
+      "dimension_score_changes": {
+        "D1": {
+          "changed": 11,
+          "total": 70,
+          "mean_delta": 0.010714285714285714,
+          "mean_absolute_delta": 0.05357142857142857
+        },
+        "D2": {
+          "changed": 6,
+          "total": 70,
+          "mean_delta": 0.014285714285714285,
+          "mean_absolute_delta": 0.02142857142857143
+        },
+        "D3": {
+          "changed": 4,
+          "total": 70,
+          "mean_delta": 0.0,
+          "mean_absolute_delta": 0.02142857142857143
+        },
+        "D4": {
+          "changed": 16,
+          "total": 70,
+          "mean_delta": 0.0,
+          "mean_absolute_delta": 0.07142857142857142
+        }
+      },
+      "val_signature": "3a8962e145430ed99e9b55eeba4ed2858a63524be397d0925fa9c18682c019db",
+      "judge_signature": "fe36ee11f4b283b8aed281d8e872672028a9efe936a4c2417d79e1bed2cc0bf7"
+    },
+    {
+      "group": "gpt-6.1-sol_open",
+      "model": "gpt-6.1-sol",
+      "split": "open",
+      "total": 108,
+      "val_valid_ahat": 96,
+      "val_valid_benchmark": 96,
+      "ahat_mean": 0.6398148148148146,
+      "benchmark_mean": 0.6361111111111112,
+      "delta_percentage_points": -0.37037037037034315,
+      "same_case_scores": 48,
+      "changed_case_scores": 60,
+      "mean_absolute_case_delta": 0.05185185185185185,
+      "max_absolute_case_delta": 0.25,
+      "critical_failure_ahat": 0,
+      "critical_failure_benchmark": 0,
+      "critical_failure_disagreements": 0,
+      "critical_failure_changed_ids": [],
+      "dimension_score_changes": {
+        "D1": {
+          "changed": 34,
+          "total": 96,
+          "mean_delta": 0.005208333333333333,
+          "mean_absolute_delta": 0.09895833333333333
+        },
+        "D2": {
+          "changed": 34,
+          "total": 96,
+          "mean_delta": -0.010416666666666666,
+          "mean_absolute_delta": 0.09375
+        },
+        "D3": {
+          "changed": 29,
+          "total": 96,
+          "mean_delta": -0.018229166666666668,
+          "mean_absolute_delta": 0.09635416666666667
+        },
+        "D4": {
+          "changed": 22,
+          "total": 96,
+          "mean_delta": -0.0026041666666666665,
+          "mean_absolute_delta": 0.07552083333333333
+        }
+      },
+      "val_signature": "d2ecee2934bfd629e423dc246c0839ed2c255391606e985bee8b7cf94a768fa6",
+      "judge_signature": "04388d292632571c98f2a6ce604698b5f497c9f583240d7fcb0546a1f7d1a9a8"
+    }
+  ],
+  "independently_verified": true
+}

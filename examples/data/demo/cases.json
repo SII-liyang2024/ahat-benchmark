@@ -1,0 +1,103 @@
+[
+  {
+    "id": "demo-valid",
+    "instruction": "Pick up the cup.",
+    "scene_graph": {
+      "rooms": [
+        {
+          "name": "room_1",
+          "states": {}
+        }
+      ],
+      "furnitures": [
+        {
+          "name": "table_1",
+          "states": {}
+        }
+      ],
+      "objects": [
+        {
+          "name": "cup_1",
+          "states": {}
+        },
+        {
+          "name": "lid_1",
+          "states": {}
+        }
+      ],
+      "agent": [
+        {
+          "name": "agent_0",
+          "location": "cup_1",
+          "holding": null
+        }
+      ],
+      "person": [],
+      "links": [
+        [
+          "room_1",
+          "table_1",
+          "in"
+        ],
+        [
+          "table_1",
+          "cup_1",
+          "on"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "demo-blocked",
+    "instruction": "Pick up the cup.",
+    "scene_graph": {
+      "rooms": [
+        {
+          "name": "room_1",
+          "states": {}
+        }
+      ],
+      "furnitures": [
+        {
+          "name": "table_1",
+          "states": {}
+        }
+      ],
+      "objects": [
+        {
+          "name": "cup_1",
+          "states": {}
+        },
+        {
+          "name": "lid_1",
+          "states": {}
+        }
+      ],
+      "agent": [
+        {
+          "name": "agent_0",
+          "location": "cup_1",
+          "holding": null
+        }
+      ],
+      "person": [],
+      "links": [
+        [
+          "room_1",
+          "table_1",
+          "in"
+        ],
+        [
+          "table_1",
+          "cup_1",
+          "on"
+        ],
+        [
+          "cup_1",
+          "lid_1",
+          "on"
+        ]
+      ]
+    }
+  }
+]

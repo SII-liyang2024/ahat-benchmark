@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77", "wheel>=0.45"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ahat-benchmark"
+version = "2.1.0"
+description = "Versioned, self-contained AHAT benchmark with VAL and LLM rubric evaluation"
+readme = "README.md"
+license = "MIT AND BSD-3-Clause AND CC-BY-4.0 AND CC-BY-NC-4.0"
+license-files = ["LICENSE", "licenses/*"]
+requires-python = ">=3.10"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "openai>=1.0",
+  "python-dotenv>=1.0",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["build>=1.2"]
+
+[project.urls]
+Dataset = "https://huggingface.co/datasets/SII-liyang2024/AHAT-dataset"
+Paper = "https://arxiv.org/abs/2602.12244"
+"Upstream AHAT" = "https://github.com/Sii-liuzhihong/AHAT"
+
+[project.scripts]
+ahat-benchmark = "ahat_benchmark.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"ahat_benchmark.judge" = ["paper_rubric/*.txt"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

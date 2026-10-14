@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "model": "synthetic-demo",
+    "method": "handwritten-fixture"
+  },
+  "results": [
+    {
+      "id": "demo-valid",
+      "plan": [
+        "(pick_from_surface agent_0 cup_1 table_1)"
+      ]
+    },
+    {
+      "id": "demo-blocked",
+      "plan": [
+        "(pick_from_surface agent_0 cup_1 table_1)"
+      ]
+    }
+  ]
+}

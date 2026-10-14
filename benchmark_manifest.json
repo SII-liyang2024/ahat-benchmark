@@ -1,0 +1,47 @@
+{
+  "project": "ahat-benchmark",
+  "version": "2.1.0",
+  "schema_version": "2.0",
+  "domain": {
+    "name": "ahat-v1",
+    "path": "vendor/pddl/domain_0102_test.pddl",
+    "sha256": "3648966f5c0b46d53a3add4cf604e62e9eef1376f735fc480fe95f6ae2fe62b4"
+  },
+  "validator": {
+    "name": "VAL",
+    "platform": "linux-x86_64",
+    "path": "vendor/val/Validate",
+    "sha256": "03fa000c6842d3fc5ea15740195e91178a2918f6454d4abd4438454ed136a136",
+    "library_path": "vendor/val/libVAL.so",
+    "library_sha256": "364cbf670a6085885a30fb3d05bbf1a6de923cc94b19f479500aa4dbe7058c95",
+    "version": "full-scene-val-audited-v1"
+  },
+  "judge": {
+    "version": "paper-rubric-2602.12244v2",
+    "dimensions": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "weights": {
+      "D1": 0.4,
+      "D2": 0.2,
+      "D3": 0.2,
+      "D4": 0.2
+    },
+    "critical_failure_cap": 0.2,
+    "paper": "https://arxiv.org/html/2602.12244v2#A3",
+    "prompt_hashes": {
+      "D1": "01525b4605bf5140387cc3302f15b56709ac0821edab446078b6bcea818165fd",
+      "D2": "c6522c3b8cc58b50f1d62f9e6d980d9348e48b325c4a000aaa2f28a5f7ccb55c",
+      "D3": "fbdfb028949b05eebd051085f98770f18226b411e3e34678295ab7d34db34c1e",
+      "D4": "1ec1d4d1138c7e1efa18d14d79b62eb63a0715203b477223fbfa381dd7ca2e3d"
+    }
+  },
+  "benchmarks": [
+    "ahat-easy",
+    "ahat-medium",
+    "ahat-open"
+  ]
+}

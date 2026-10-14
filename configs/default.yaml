@@ -1,0 +1,22 @@
+domain: ../vendor/pddl/domain_0102_test.pddl
+val_executable: ../vendor/val/Validate
+val_timeout_seconds: 10.0
+workers: 8
+judge:
+  model: ds-v4.1-flash-w8a8
+  base_url: null
+  base_url_env: RUBRIC_EVAL_OPENAI_BASE_URL
+  api_key_env: RUBRIC_EVAL_OPENAI_API_KEY
+  max_attempts: 3
+  request_timeout_seconds: 180
+  dimension_workers: 4
+scoring:
+  weights:
+    D1: 0.40
+    D2: 0.20
+    D3: 0.20
+    D4: 0.20
+  valid_scores: [0.0, 0.25, 0.5, 0.75, 1.0]
+  critical_failure_cap: 0.2
+  good_threshold: 0.75
+  normal_threshold: 0.40

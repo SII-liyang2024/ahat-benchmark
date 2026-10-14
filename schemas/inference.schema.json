@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ahat-benchmark.local/schemas/inference.schema.json",
+  "title": "AHAT Benchmark Inference Results",
+  "type": "object",
+  "required": ["meta", "results"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["dataset", "model"],
+      "properties": {
+        "dataset": {
+          "enum": ["ahat-easy", "ahat-medium", "ahat-open", "ahat-human"]
+        },
+        "model": {"type": "string", "minLength": 1},
+        "checkpoint": {"type": "string"},
+        "run_id": {"type": "string"},
+        "method": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "plan"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "plan": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "raw_response": {"type": ["string", "null"]},
+          "error": {"type": ["string", "null"]}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

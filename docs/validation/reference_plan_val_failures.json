@@ -1,0 +1,383 @@
+{
+  "source_sha256": "05cb4e725b5a8a93feb8c8609c768dc7a93371fb00c076f09ddaa104bdf8fc94",
+  "reference_code_sha256": "831327119172acf20f231d3e396ef4e97fe452f04a082fefbeef10dff5eec7c7",
+  "case_count": 9,
+  "split_counts": {
+    "easy": 2,
+    "medium": 2,
+    "open": 5
+  },
+  "cases": [
+    {
+      "record_id": "c9520831-5973-4b31-bbb9-97590cd58ebd",
+      "instruction": "After a sweaty basketball game, bring a clean bath towel from the bathroom to your bedroom and place it on your bed for your shower later.",
+      "id": "c9520831-5973-4b31-bbb9-97590cd58ebd",
+      "plan": [
+        "(navigate agent_1 shower_16 bath_towel_17)",
+        "(pick_from_surface agent_1 bath_towel_17 shower_16)",
+        "(navigate agent_1 bath_towel_17 shower_16)",
+        "(clean_item_with_faucet agent_1 bath_towel_17 shower_16)",
+        "(navigate agent_1 shower_16 bed_17)",
+        "(place_on_surface agent_1 bath_towel_17 bed_17)"
+      ],
+      "type": "easy",
+      "val_status": "invalid",
+      "same_verdict_as_audited_reviewer": true,
+      "diagnostics": [
+        {
+          "step": 4,
+          "action": "(clean_item_with_faucet agent_1 bath_towel_17 shower_16)",
+          "undeclared_arguments": [],
+          "unknown_action": true,
+          "wrong_arity": false
+        }
+      ],
+      "val_failure_excerpt": "item\n...action passes type checking.\nType-checking clean_furniture\n...action passes type checking.\nType-checking clean_room_floor\n...action passes type checking.\nType-checking fill_device_with_water\n...action passes type checking.\nType-checking pour\n...action passes type checking.\nType-checking move_furniture_to_room\n...action passes type checking.\nType-checking move_device_to_room\n...action passes type checking.\nType-checking hand_over_to_person\n...action passes type checking.\nChecking plan: /tmp/ahat-val-qw1dmp5h/plan.txt\nBad plan description!\n\n\nFailed plans:\n /tmp/ahat-val-qw1dmp5h/plan.txt"
+    },
+    {
+      "record_id": "15cab8f3-fa26-4876-bae6-af91e5fae2a9",
+      "instruction": "Can you turn on the lights in the living room?",
+      "id": "15cab8f3-fa26-4876-bae6-af91e5fae2a9",
+      "plan": [
+        "(navigate agent_0 outdoor_9 smart_light_22)",
+        "(light_on agent_0 smart_light_22)"
+      ],
+      "type": "easy",
+      "val_status": "invalid",
+      "same_verdict_as_audited_reviewer": true,
+      "diagnostics": [
+        {
+          "step": 2,
+          "action": "(light_on agent_0 smart_light_22)",
+          "undeclared_arguments": [],
+          "unknown_action": true,
+          "wrong_arity": false
+        }
+      ],
+      "val_failure_excerpt": "item\n...action passes type checking.\nType-checking clean_furniture\n...action passes type checking.\nType-checking clean_room_floor\n...action passes type checking.\nType-checking fill_device_with_water\n...action passes type checking.\nType-checking pour\n...action passes type checking.\nType-checking move_furniture_to_room\n...action passes type checking.\nType-checking move_device_to_room\n...action passes type checking.\nType-checking hand_over_to_person\n...action passes type checking.\nChecking plan: /tmp/ahat-val-1hglwn98/plan.txt\nBad plan description!\n\n\nFailed plans:\n /tmp/ahat-val-1hglwn98/plan.txt"
+    },
+    {
+      "record_id": "4782e797-4375-47f2-9e8a-258f739c89ce",
+      "instruction": "Arrange the dining table with the statue, vase, cap, plate, and teapot from the dining room and kitchen, bring a candle from the laundry room to the dining table, light the candle, and place a bowl of fruit on the table.",
+      "id": "4782e797-4375-47f2-9e8a-258f739c89ce",
+      "plan": [
+        "(navigate agent_1 floor_dining_room_1 statue_1)",
+        "(pick_from_surface agent_1 statue_1 table_26)",
+        "(navigate agent_1 statue_1 table_28)",
+        "(place_on_surface agent_1 statue_1 table_28)",
+        "(navigate agent_1 table_28 vase_0)",
+        "(pick_from_surface agent_1 vase_0 table_26)",
+        "(navigate agent_1 vase_0 table_28)",
+        "(place_next_to_surface agent_1 vase_0 statue_1 table_28)",
+        "(navigate agent_1 table_28 plate_invented_1)",
+        "(pick_from_surface agent_1 plate_invented_1 counter_41)",
+        "(navigate agent_1 plate_invented_1 table_28)",
+        "(place_next_to_surface agent_1 plate_invented_1 vase_0 table_28)",
+        "(navigate agent_1 table_28 teapot_24)",
+        "(pick_from_surface agent_1 teapot_24 chair_17)",
+        "(navigate agent_1 teapot_24 table_28)",
+        "(place_next_to_surface agent_1 teapot_24 plate_invented_1 table_28)",
+        "(navigate agent_1 table_28 cabinet_44)",
+        "(open agent_1 cabinet_44)",
+        "(navigate agent_1 cabinet_44 candle_4)",
+        "(pick_from_receptacle agent_1 candle_4 cabinet_44)",
+        "(navigate agent_1 candle_4 table_28)",
+        "(place_next_to_surface agent_1 candle_4 teapot_24 table_28)",
+        "(navigate agent_1 table_28 candle_4)",
+        "(light_on agent_1 candle_4)",
+        "(navigate agent_1 candle_4 bowl_1)",
+        "(pick_from_surface agent_1 bowl_1 table_26)",
+        "(navigate agent_1 bowl_1 table_28)",
+        "(place_next_to_surface agent_1 bowl_1 candle_4 table_28)",
+        "(navigate agent_1 table_28 fruit_basket_2)",
+        "(pick_from_surface agent_1 fruit_basket_2 table_26)",
+        "(navigate agent_1 fruit_basket_2 table_28)",
+        "(place_next_to_surface agent_1 fruit_basket_2 bowl_1 table_28)"
+      ],
+      "type": "medium",
+      "val_status": "invalid",
+      "same_verdict_as_audited_reviewer": true,
+      "diagnostics": [
+        {
+          "step": 24,
+          "action": "(light_on agent_1 candle_4)",
+          "undeclared_arguments": [],
+          "unknown_action": true,
+          "wrong_arity": false
+        }
+      ],
+      "val_failure_excerpt": "item\n...action passes type checking.\nType-checking clean_furniture\n...action passes type checking.\nType-checking clean_room_floor\n...action passes type checking.\nType-checking fill_device_with_water\n...action passes type checking.\nType-checking pour\n...action passes type checking.\nType-checking move_furniture_to_room\n...action passes type checking.\nType-checking move_device_to_room\n...action passes type checking.\nType-checking hand_over_to_person\n...action passes type checking.\nChecking plan: /tmp/ahat-val-r3v8nn8v/plan.txt\nBad plan description!\n\n\nFailed plans:\n /tmp/ahat-val-r3v8nn8v/plan.txt"
+    },
+    {
+      "record_id": "fac6321b-b35f-4b4c-a91c-3ea5f96f6ddc",
+      "instruction": "Arrange ambient lighting by switching on lamps in the bedroom and office, tidy up by moving scattered books from the dining room, office, and closet to the bedroom shelf, and bring a festive candle from the closet to the dining table.",
+      "id": "fac6321b-b35f-4b4c-a91c-3ea5f96f6ddc",
+      "plan": [
+        "(navigate agent_1 floor_bedroom_1 lamp_bedroom_2)",
+        "(light_on agent_1 lamp_bedroom_2)",
+        "(navigate agent_1 lamp_bedroom_2 lamp_office_2)",
+        "(light_on agent_1 lamp_office_2)",
+        "(navigate agent_1 lamp_office_2 book_dining_1)",
+        "(pick_from_surface agent_1 book_dining_1 table_11)",
+        "(navigate agent_1 book_dining_1 shelves_bedroom_1_invented_1)",
+        "(place_on_surface agent_1 book_dining_1 shelves_bedroom_1_invented_1)",
+        "(navigate agent_1 shelves_bedroom_1_invented_1 book_office_2)",
+        "(pick_from_surface agent_1 book_office_2 table_44)",
+        "(navigate agent_1 book_office_2 shelves_bedroom_1_invented_1)",
+        "(place_on_surface agent_1 book_office_2 shelves_bedroom_1_invented_1)",
+        "(navigate agent_1 shelves_bedroom_1_invented_1 book_closet_2)",
+        "(pick_from_surface agent_1 book_closet_2 shelves_43)",
+        "(navigate agent_1 book_closet_2 shelves_bedroom_1_invented_1)",
+        "(place_on_surface agent_1 book_closet_2 shelves_bedroom_1_invented_1)",
+        "(navigate agent_1 shelves_bedroom_1_invented_1 candle_festive_1)",
+        "(pick_from_surface agent_1 candle_festive_1 shelves_43)",
+        "(navigate agent_1 candle_festive_1 table_11)",
+        "(place_on_surface agent_1 candle_festive_1 table_11)"
+      ],
+      "type": "medium",
+      "val_status": "invalid",
+      "same_verdict_as_audited_reviewer": true,
+      "diagnostics": [
+        {
+          "step": 2,
+          "action": "(light_on agent_1 lamp_bedroom_2)",
+          "undeclared_arguments": [],
+          "unknown_action": true,
+          "wrong_arity": false
+        },
+        {
+          "step": 4,
+          "action": "(light_on agent_1 lamp_office_2)",
+          "undeclared_arguments": [],
+          "unknown_action": true,
+          "wrong_arity": false
+        }
+      ],
+      "val_failure_excerpt": "item\n...action passes type checking.\nType-checking clean_furniture\n...action passes type checking.\nType-checking clean_room_floor\n...action passes type checking.\nType-checking fill_device_with_water\n...action passes type checking.\nType-checking pour\n...action passes type checking.\nType-checking move_furniture_to_room\n...action passes type checking.\nType-checking move_device_to_room\n...action passes type checking.\nType-checking hand_over_to_person\n...action passes type checking.\nChecking plan: /tmp/ahat-val-534dee3j/plan.txt\nBad plan description!\n\n\nFailed plans:\n /tmp/ahat-val-534dee3j/plan.txt"
+    },
+    {
+      "record_id": "f623e258-d97b-4a07-9121-0337a5fd3277",
+      "instruction": "Prepare a hearty breakfast for two guests",
+      "id": "f623e258-d97b-4a07-9121-0337a5fd3277",
+      "plan": [
+        "(navigate agent_0 outdoor_12 dining_table_3)",
+        "(navigate agent_0 dining_table_3 milk_carton_1)",
+        "(pick_from_surface agent_0 milk_carton_1 refrigerator_1)",
+        "(navigate agent_0 milk_carton_1 dining_table_3)",
+        "(place_on_surface agent_0 milk_carton_1 dining_table_3)",
+        "(navigate agent_0 dining_table_3 refrigerator_1)",
+        "(open agent_0 refrigerator_1)",
+        "(navigate agent_0 refrigerator_1 dining_table_3)",
+        "(navigate agent_0 dining_table_3 egg_carton_46)",
+        "(pick_from_receptacle agent_0 egg_carton_46 refrigerator_1)",
+        "(navigate agent_0 egg_carton_46 dining_table_3)",
+        "(place_on_surface agent_0 egg_carton_46 dining_table_3)",
+        "(navigate agent_0 dining_table_3 candle_9)",
+        "(light_on agent_0 candle_9)",
+        "(navigate agent_0 candle_9 candle_10)",
+        "(light_on agent_0 candle_10)"
+      ],
+      "type": "open",
+      "val_status": "invalid",
+      "same_verdict_as_audited_reviewer": true,
+      "diagnostics": [
+        {
+          "step": 14,
+          "action": "(light_on agent_0 candle_9)",
+          "undeclared_arguments": [],
+          "unknown_action": true,
+          "wrong_arity": false
+        },
+        {
+          "step": 16,
+          "action": "(light_on agent_0 candle_10)",
+          "undeclared_arguments": [],
+          "unknown_action": true,
+          "wrong_arity": false
+        }
+      ],
+      "val_failure_excerpt": "item\n...action passes type checking.\nType-checking clean_furniture\n...action passes type checking.\nType-checking clean_room_floor\n...action passes type checking.\nType-checking fill_device_with_water\n...action passes type checking.\nType-checking pour\n...action passes type checking.\nType-checking move_furniture_to_room\n...action passes type checking.\nType-checking move_device_to_room\n...action passes type checking.\nType-checking hand_over_to_person\n...action passes type checking.\nChecking plan: /tmp/ahat-val-c7l4sc79/plan.txt\nBad plan description!\n\n\nFailed plans:\n /tmp/ahat-val-c7l4sc79/plan.txt"
+    },
+    {
+      "record_id": "7bc96205-5b58-4310-b056-8768d2c9ca7a",
+      "instruction": "Host a cozy dinner for guests",
+      "id": "7bc96205-5b58-4310-b056-8768d2c9ca7a",
+      "plan": [
+        "(navigate agent_0 dining_room_11 candle_16)",
+        "(pick_from_surface agent_0 candle_16 dining_table_19)",
+        "(navigate agent_0 candle_16 dining_table_22)",
+        "(place_on_surface agent_0 candle_16 dining_table_22)",
+        "(navigate agent_0 dining_table_22 wine_bottle_17)",
+        "(pick_from_surface agent_0 wine_bottle_17 dining_table_19)",
+        "(navigate agent_0 wine_bottle_17 dining_table_22)",
+        "(place_on_surface agent_0 wine_bottle_17 dining_table_22)",
+        "(navigate agent_0 dining_table_22 tablecloth_43)",
+        "(pick_from_surface agent_0 tablecloth_43 dining_table_19)",
+        "(navigate agent_0 tablecloth_43 dining_table_22)",
+        "(place_on_surface agent_0 tablecloth_43 dining_table_22)",
+        "(navigate agent_0 dining_table_22 centerpiece_78)",
+        "(pick_from_surface agent_0 centerpiece_78 dining_table_19)",
+        "(navigate agent_0 centerpiece_78 dining_table_22)",
+        "(place_on_surface agent_0 centerpiece_78 dining_table_22)",
+        "(navigate agent_0 dining_table_22 chair_23)",
+        "(navigate agent_0 chair_23 napkin_79)",
+        "(pick_from_surface agent_0 napkin_79 chair_20)",
+        "(navigate agent_0 napkin_79 chair_23)",
+        "(place_next_to_surface agent_0 napkin_79 coaster_85 chair_23)",
+        "(navigate agent_0 chair_23 chair_24)",
+        "(navigate agent_0 chair_24 coaster_86)",
+        "(pick_from_surface agent_0 coaster_86 chair_23)",
+        "(navigate agent_0 coaster_86 chair_24)",
+        "(place_on_surface agent_0 coaster_86 chair_24)",
+        "(navigate agent_0 chair_24 napkin_80)",
+        "(pick_from_surface agent_0 napkin_80 chair_20)",
+        "(navigate agent_0 napkin_80 chair_24)",
+        "(place_next_to_surface agent_0 napkin_80 coaster_86 chair_24)",
+        "(navigate agent_0 chair_24 candle_81)",
+        "(light_on agent_0 candle_81)"
+      ],
+      "type": "open",
+      "val_status": "invalid",
+      "same_verdict_as_audited_reviewer": true,
+      "diagnostics": [
+        {
+          "step": 32,
+          "action": "(light_on agent_0 candle_81)",
+          "undeclared_arguments": [],
+          "unknown_action": true,
+          "wrong_arity": false
+        }
+      ],
+      "val_failure_excerpt": "item\n...action passes type checking.\nType-checking clean_furniture\n...action passes type checking.\nType-checking clean_room_floor\n...action passes type checking.\nType-checking fill_device_with_water\n...action passes type checking.\nType-checking pour\n...action passes type checking.\nType-checking move_furniture_to_room\n...action passes type checking.\nType-checking move_device_to_room\n...action passes type checking.\nType-checking hand_over_to_person\n...action passes type checking.\nChecking plan: /tmp/ahat-val-t8oslyvh/plan.txt\nBad plan description!\n\n\nFailed plans:\n /tmp/ahat-val-t8oslyvh/plan.txt"
+    },
+    {
+      "record_id": "d1039117-4dd5-411f-bca3-525adbcc1b22",
+      "instruction": "Create a cozy two-person sunset spot",
+      "id": "d1039117-4dd5-411f-bca3-525adbcc1b22",
+      "plan": [
+        "(navigate agent_0 closet_5 throw_pillow_1)",
+        "(pick_from_surface agent_0 throw_pillow_1 sofa_1)",
+        "(navigate agent_0 throw_pillow_1 balcony_chair_12)",
+        "(place_on_surface agent_0 throw_pillow_1 balcony_chair_12)",
+        "(navigate agent_0 balcony_chair_12 throw_pillow_2)",
+        "(pick_from_surface agent_0 throw_pillow_2 sofa_1)",
+        "(navigate agent_0 throw_pillow_2 balcony_chair_12)",
+        "(place_next_to_surface agent_0 throw_pillow_2 throw_pillow_1 balcony_chair_12)",
+        "(navigate agent_0 balcony_chair_12 blanket_3)",
+        "(pick_from_surface agent_0 blanket_3 sofa_1)",
+        "(navigate agent_0 blanket_3 balcony_chair_12)",
+        "(place_next_to_surface agent_0 blanket_3 throw_pillow_2 balcony_chair_12)",
+        "(navigate agent_0 balcony_chair_12 candle_12)",
+        "(pick_from_surface agent_0 candle_12 coffee_table_2)",
+        "(navigate agent_0 candle_12 balcony_chair_12)",
+        "(place_next_to_surface agent_0 candle_12 blanket_3 balcony_chair_12)",
+        "(navigate agent_0 balcony_chair_12 candle_12)",
+        "(light_on agent_0 candle_12)",
+        "(navigate agent_0 candle_12 small_lantern_37)",
+        "(pick_from_surface agent_0 small_lantern_37 small_table_11)",
+        "(navigate agent_0 small_lantern_37 balcony_chair_12)",
+        "(place_next_to_surface agent_0 small_lantern_37 candle_12 balcony_chair_12)",
+        "(navigate agent_0 balcony_chair_12 small_lantern_37)",
+        "(power_on agent_0 small_lantern_37)"
+      ],
+      "type": "open",
+      "val_status": "invalid",
+      "same_verdict_as_audited_reviewer": true,
+      "diagnostics": [
+        {
+          "step": 18,
+          "action": "(light_on agent_0 candle_12)",
+          "undeclared_arguments": [],
+          "unknown_action": true,
+          "wrong_arity": false
+        }
+      ],
+      "val_failure_excerpt": "item\n...action passes type checking.\nType-checking clean_furniture\n...action passes type checking.\nType-checking clean_room_floor\n...action passes type checking.\nType-checking fill_device_with_water\n...action passes type checking.\nType-checking pour\n...action passes type checking.\nType-checking move_furniture_to_room\n...action passes type checking.\nType-checking move_device_to_room\n...action passes type checking.\nType-checking hand_over_to_person\n...action passes type checking.\nChecking plan: /tmp/ahat-val-m_sihw1q/plan.txt\nBad plan description!\n\n\nFailed plans:\n /tmp/ahat-val-m_sihw1q/plan.txt"
+    },
+    {
+      "record_id": "8e2eac82-2841-4922-ac45-05702b3f073f",
+      "instruction": "Prepare a cozy movie night",
+      "id": "8e2eac82-2841-4922-ac45-05702b3f073f",
+      "plan": [
+        "(navigate agent_0 bedroom_4 monitor_98)",
+        "(power_on agent_0 monitor_98)",
+        "(navigate agent_0 monitor_98 candle_63)",
+        "(pick_from_surface agent_0 candle_63 dining_table_46)",
+        "(navigate agent_0 candle_63 tv_stand_28)",
+        "(place_on_surface agent_0 candle_63 tv_stand_28)",
+        "(navigate agent_0 tv_stand_28 candle_63)",
+        "(light_on agent_0 candle_63)",
+        "(navigate agent_0 candle_63 magazine_136)",
+        "(pick_from_surface agent_0 magazine_136 bench_24)",
+        "(navigate agent_0 magazine_136 sofa_23)",
+        "(place_on_surface agent_0 magazine_136 sofa_23)",
+        "(navigate agent_0 sofa_23 magazine_136)",
+        "(pick_from_surface agent_0 magazine_136 sofa_23)",
+        "(navigate agent_0 magazine_136 sofa_23)",
+        "(place_next_to_surface agent_0 magazine_136 throw_blanket_152 sofa_23)",
+        "(navigate agent_0 sofa_23 coaster_set_119)",
+        "(pick_from_surface agent_0 coaster_set_119 dining_table_45)",
+        "(navigate agent_0 coaster_set_119 sofa_23)",
+        "(place_on_surface agent_0 coaster_set_119 sofa_23)",
+        "(navigate agent_0 sofa_23 coaster_set_119)",
+        "(pick_from_surface agent_0 coaster_set_119 sofa_23)",
+        "(navigate agent_0 coaster_set_119 sofa_23)",
+        "(place_next_to_surface agent_0 coaster_set_119 magazine_136 sofa_23)"
+      ],
+      "type": "open",
+      "val_status": "invalid",
+      "same_verdict_as_audited_reviewer": true,
+      "diagnostics": [
+        {
+          "step": 8,
+          "action": "(light_on agent_0 candle_63)",
+          "undeclared_arguments": [],
+          "unknown_action": true,
+          "wrong_arity": false
+        }
+      ],
+      "val_failure_excerpt": "item\n...action passes type checking.\nType-checking clean_furniture\n...action passes type checking.\nType-checking clean_room_floor\n...action passes type checking.\nType-checking fill_device_with_water\n...action passes type checking.\nType-checking pour\n...action passes type checking.\nType-checking move_furniture_to_room\n...action passes type checking.\nType-checking move_device_to_room\n...action passes type checking.\nType-checking hand_over_to_person\n...action passes type checking.\nChecking plan: /tmp/ahat-val-zwhopkb9/plan.txt\nBad plan description!\n\n\nFailed plans:\n /tmp/ahat-val-zwhopkb9/plan.txt"
+    },
+    {
+      "record_id": "7a510a12-15d6-4b12-b32d-0ec007dc7327",
+      "instruction": "Get everything ready for movie night.",
+      "id": "7a510a12-15d6-4b12-b32d-0ec007dc7327",
+      "plan": [
+        "(navigate agent_0 bathroom_1 remote_control_14)",
+        "(pick_from_surface agent_0 remote_control_14 sofa_11)",
+        "(navigate agent_0 remote_control_14 tv_stand_13)",
+        "(place_on_surface agent_0 remote_control_14 tv_stand_13)",
+        "(navigate agent_0 tv_stand_13 coaster_set_18)",
+        "(pick_from_surface agent_0 coaster_set_18 coffee_table_12)",
+        "(navigate agent_0 coaster_set_18 tv_stand_13)",
+        "(place_on_surface agent_0 coaster_set_18 tv_stand_13)",
+        "(navigate agent_0 tv_stand_13 coaster_set_18)",
+        "(pick_from_surface agent_0 coaster_set_18 tv_stand_13)",
+        "(navigate agent_0 coaster_set_18 tv_stand_13)",
+        "(place_next_to_surface agent_0 coaster_set_18 game_console_22 tv_stand_13)",
+        "(navigate agent_0 tv_stand_13 game_console_22)",
+        "(power_on agent_0 game_console_22)",
+        "(navigate agent_0 game_console_22 coffee_table_12)",
+        "(navigate agent_0 coffee_table_12 table_lamp_9)",
+        "(pick_from_surface agent_0 table_lamp_9 nightstand_8)",
+        "(navigate agent_0 table_lamp_9 coffee_table_12)",
+        "(place_on_surface agent_0 table_lamp_9 coffee_table_12)",
+        "(navigate agent_0 coffee_table_12 table_lamp_9)",
+        "(light_on agent_0 table_lamp_9)"
+      ],
+      "type": "open",
+      "val_status": "invalid",
+      "same_verdict_as_audited_reviewer": true,
+      "diagnostics": [
+        {
+          "step": 21,
+          "action": "(light_on agent_0 table_lamp_9)",
+          "undeclared_arguments": [],
+          "unknown_action": true,
+          "wrong_arity": false
+        }
+      ],
+      "val_failure_excerpt": "item\n...action passes type checking.\nType-checking clean_furniture\n...action passes type checking.\nType-checking clean_room_floor\n...action passes type checking.\nType-checking fill_device_with_water\n...action passes type checking.\nType-checking pour\n...action passes type checking.\nType-checking move_furniture_to_room\n...action passes type checking.\nType-checking move_device_to_room\n...action passes type checking.\nType-checking hand_over_to_person\n...action passes type checking.\nChecking plan: /tmp/ahat-val-64l1l_k4/plan.txt\nBad plan description!\n\n\nFailed plans:\n /tmp/ahat-val-64l1l_k4/plan.txt"
+    }
+  ]
+}

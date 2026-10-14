@@ -1,0 +1,48 @@
+{
+  "source": {
+    "repository": "SII-liyang2024/AHAT-dataset",
+    "file": "ahat_eval_set.jsonl",
+    "revision": "44de8a66c58cfd4cea03923bed9dbb8bd69d8f85",
+    "url": "https://huggingface.co/datasets/SII-liyang2024/AHAT-dataset/resolve/44de8a66c58cfd4cea03923bed9dbb8bd69d8f85/ahat_eval_set.jsonl",
+    "sha256": "05cb4e725b5a8a93feb8c8609c768dc7a93371fb00c076f09ddaa104bdf8fc94"
+  },
+  "license": "CC-BY-NC-4.0",
+  "synced_at": "2026-10-14T02:23:15.308457+00:00",
+  "case_count": 348,
+  "split_counts": {
+    "easy": 146,
+    "medium": 94,
+    "open": 108
+  },
+  "transformation": "Split by source type; retain id, instruction and scene_graph verbatim in source order. Reference plans remain only in the unchanged source JSONL.",
+  "artifacts": [
+    {
+      "path": "ahat_eval_set.jsonl",
+      "sha256": "05cb4e725b5a8a93feb8c8609c768dc7a93371fb00c076f09ddaa104bdf8fc94"
+    },
+    {
+      "path": "ahat-easy/cases.json",
+      "sha256": "8af2931a1a20194ffa7efd09c2e88e2e8073d29f5374fa125c2d9570a773e404"
+    },
+    {
+      "path": "ahat-easy/manifest.json",
+      "sha256": "082934414c1f6f266c9a020d48413ff8ca060ddc7d8a27d229c09fb39647cdba"
+    },
+    {
+      "path": "ahat-medium/cases.json",
+      "sha256": "4a47d71d4b2af577730b056bcdeb8795cd346faee2b845dfea303e5ed973ca1b"
+    },
+    {
+      "path": "ahat-medium/manifest.json",
+      "sha256": "20eddb4318fd5301cd4c82e41df75b374e2e18620eec69a58626bb463f2cde45"
+    },
+    {
+      "path": "ahat-open/cases.json",
+      "sha256": "3f2446129e169337959c1e95051cbea3fc8524184e5a277375a75229c78d4ae1"
+    },
+    {
+      "path": "ahat-open/manifest.json",
+      "sha256": "f126ec3ac0eeb08f32e282ef8a57bff0f1aabbc9e01ddc0b08239ecab736d36c"
+    }
+  ]
+}

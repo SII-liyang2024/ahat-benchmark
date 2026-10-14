@@ -1,0 +1,17 @@
+include README.md VENDORED.md THIRD_PARTY_NOTICES.md LICENSE CITATION.cff CHANGELOG.md CONTRIBUTING.md
+include benchmark_manifest.json .env.example .gitignore
+recursive-include benchmarks *.json *.jsonl *.md
+recursive-include configs *.yaml
+recursive-include schemas *.json
+recursive-include vendor *
+recursive-include licenses *
+recursive-include docs *.md *.json
+recursive-include examples *.json *.yaml *.py *.md
+recursive-include scripts *.py
+recursive-include tests *.py
+prune .local
+prune outputs
+prune .github
+prune build
+prune dist
+global-exclude __pycache__ *.py[cod] .env *.log core core.*

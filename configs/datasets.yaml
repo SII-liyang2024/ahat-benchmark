@@ -1,0 +1,4 @@
+datasets:
+  ahat-easy: ../benchmarks/ahat-easy/cases.json
+  ahat-medium: ../benchmarks/ahat-medium/cases.json
+  ahat-open: ../benchmarks/ahat-open/cases.json
