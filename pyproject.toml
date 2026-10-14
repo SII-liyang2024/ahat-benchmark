@@ -27,8 +27,9 @@ dependencies = [
 dev = ["build>=1.2"]
 
 [project.urls]
+Homepage = "https://tgpo2026.github.io/TGPO/"
 Dataset = "https://huggingface.co/datasets/SII-liyang2024/AHAT-dataset"
-Paper = "https://arxiv.org/abs/2602.12244"
+Paper = "https://arxiv.org/html/2602.12244v2"
 "Upstream AHAT" = "https://github.com/Sii-liuzhihong/AHAT"
 
 [project.scripts]

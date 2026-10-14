@@ -4,7 +4,8 @@ Standalone evaluation of household robot plans with **VAL validation** and the
 **four-dimension AHAT LLM rubric**. It includes the evaluation data, PDDL domain,
 original paper prompts and a pinned Linux VAL runtime.
 
-[Paper](https://arxiv.org/abs/2602.12244) ·
+[Project page](https://tgpo2026.github.io/TGPO/) ·
+[Paper](https://arxiv.org/html/2602.12244v2) ·
 [Dataset](https://huggingface.co/datasets/SII-liyang2024/AHAT-dataset) ·
 [Evaluation protocol](docs/evaluation.md) ·
 [Validation evidence](docs/validation/parity.md)
